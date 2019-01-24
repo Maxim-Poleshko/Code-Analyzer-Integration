@@ -7,6 +7,7 @@ devs_list = [{'first_name': 'Anton', 'last_name': 'Antonov', 'programming_langua
                 {'first_name': 'Dmitrii', 'last_name': 'Dmitriev', 'programming_language': 'Ruby'},
                 {'first_name': 'Anton', 'last_name': 'Antonov', 'programming_language': 'Python'}]
 
+
 class Developer:
     def __init__(self, first_name, last_name, programming_language):
         self.first_name = str(first_name)
@@ -18,9 +19,10 @@ class Developer:
                                                                           last_name=self.last_name,
                                                                           programming_language=self.programming_language)
 
+
 @app.route('/')
 def developer_controller():
-    object_dev=Developer('Fedor','Fedorov','Python')
+    object_dev = Developer('Fedor', 'Fedorov', 'Python')
     return f'{object_dev}'
 
 

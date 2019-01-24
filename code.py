@@ -30,6 +30,6 @@ def developer_controller():
 def remove_developer():
     try:
         del devs_list[0]
-    except:
+    except IndexError:
         return 'List is empty'
     return '<br>'.join([f"{d['first_name']} {d['last_name']} - {d['programming_language']}" for d in devs_list])
